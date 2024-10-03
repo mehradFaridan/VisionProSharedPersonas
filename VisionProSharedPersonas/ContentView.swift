@@ -13,10 +13,14 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
 
-            Text("Hello, world!")
+            Button {
+                // On button Press Shared Experiance is activated. 
+                TestActivity().activate()
+            } label: {
+                Text("Start GroupSharing")
+                Image(systemName: "person.2.fill")
+            }
 
             ToggleImmersiveSpaceButton()
         }
